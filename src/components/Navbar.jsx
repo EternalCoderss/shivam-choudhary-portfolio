@@ -1,5 +1,5 @@
 import React from 'react';
-import { smoothScroll } from '../utils/smoothScroll';
+
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
     const handleNavClick = (e, targetId) => {

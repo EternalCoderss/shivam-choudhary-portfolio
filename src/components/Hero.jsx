@@ -1,16 +1,15 @@
 import React from 'react';
+import resumeUrl from '../assets/Resume-shivam.pdf';
 
 const Hero = ({ darkMode }) => {
     const downloadResume = () => {
-        const resumeUrl = '/path/to/your/resume.pdf';
-        
         fetch(resumeUrl)
             .then(response => response.blob())
             .then(blob => {
                 const url = window.URL.createObjectURL(blob);
                 const link = document.createElement('a');
                 link.href = url;
-                link.download = 'YourName_Resume.pdf';
+                link.download = 'ShivamChoudhary_Resume.pdf';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
@@ -25,8 +24,8 @@ const Hero = ({ darkMode }) => {
         >
             <div
                 className={`max-w-2xl text-center backdrop-blur-md p-8 rounded-xl transition-all duration-300 ${darkMode
-                        ? 'bg-gray-800/50 border border-gray-700/50'
-                        : 'bg-white/70 shadow-2xl border border-gray-200'
+                    ? 'bg-gray-800/50 border border-gray-700/50'
+                    : 'bg-white/70 shadow-2xl border border-gray-200'
                     }`}
             >
                 <h1 className="text-5xl font-bold mb-4 tracking-tight">
@@ -44,8 +43,8 @@ const Hero = ({ darkMode }) => {
                     <button
                         onClick={downloadResume}
                         className={`px-6 py-3 rounded-lg transition-all duration-300 ${darkMode
-                                ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                                : 'bg-blue-500 hover:bg-blue-600 text-white'
+                            ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                            : 'bg-blue-500 hover:bg-blue-600 text-white'
                             }`}
                     >
                         Download Resume
@@ -54,8 +53,8 @@ const Hero = ({ darkMode }) => {
                     <a
                         href="#projects"
                         className={`px-6 py-3 rounded-lg border transition-all duration-300 ${darkMode
-                                ? 'border-gray-700 hover:bg-gray-800 text-white'
-                                : 'border-gray-300 hover:bg-gray-100 text-black'
+                            ? 'border-gray-700 hover:bg-gray-800 text-white'
+                            : 'border-gray-300 hover:bg-gray-100 text-black'
                             }`}
                     >
                         View Projects

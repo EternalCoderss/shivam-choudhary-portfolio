@@ -5,8 +5,12 @@ import Projects from './components/Projects';
 import Freelance from './components/Freelance';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+// import LocomotiveScroll from 'locomotive-scroll';
+
+
 
 const App = () => {
+  // const locomotiveScroll = new LocomotiveScroll();
   const [darkMode, setDarkMode] = useState(false);
   const containerRef = useRef(null);
   const cardCursorRef = useRef(null);
@@ -31,11 +35,10 @@ const App = () => {
     <div>
       <div
         ref={containerRef}
-        className={`transition-colors duration-300 ${
-          darkMode
-            ? 'bg-gradient-to-br from-gray-900 to-black text-white'
-            : 'bg-gradient-to-br from-blue-50 via-white to-indigo-50 text-gray-800'
-        }`}
+        className={`transition-colors duration-300 ${darkMode
+          ? 'bg-gradient-to-br from-gray-900 to-black text-white'
+          : 'bg-gradient-to-br from-blue-50 via-white to-indigo-50 text-gray-800'
+          }`}
         data-theme={darkMode ? 'dark' : 'light'}
       >
         <main className="relative">
